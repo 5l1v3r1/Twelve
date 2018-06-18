@@ -187,7 +187,8 @@ def II():
 def V():
 	print("An XML External Entity attack is a type of attack against an application that parses XML input")
 	print("https://www.owasp.org/index.php/XML_External_Entity_(XXE)_Processing\nhttp://web-in-security.blogspot.fr/2014/11/detecting-and-exploiting-xxe-in-saml.html\nhttps://gist.github.com/staaldraad/01415b990939494879b4\nhttps://gist.github.com/mgeeky/4f726d3b374f0a34267d4f19c9004870")
-
+	rep = input("Would you like to restart Twelve ? (y/n) > ")
+	menu() if rep == "y" else sys.exit(0)
 
 
 def I():
