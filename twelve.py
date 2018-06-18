@@ -62,7 +62,11 @@ def VI():
 				print("\nPotential XPATH found, payload > " + payload.rstrip() + " (response with payload equal to basic response)\n")
 				rep = input("Would you like to restart Twelve ? (y/n) > ")
 				menu() if rep == "y" else sys.exit(0)
-			elif "evaluation failed" or "SimpleXMLElement" in requests.get(site + payload.rstrip(), headers=header).text:
+			elif "evaluation failed" in requests.get(site + payload.rstrip(), headers=header).text:
+				print("\nPotential XPATH found, payload > " + payload.rstrip() + " (response with payload equal to basic response)\n")
+				rep = input("Would you like to restart Twelve ? (y/n) > ")
+				menu() if rep == "y" else sys.exit(0)
+			elif "SimpleXMLElement" in requests.get(site + payload.rstrip(), headers=header).text:
 				print("\nPotential XPATH found, payload > " + payload.rstrip() + " (response with payload equal to basic response)\n")
 				rep = input("Would you like to restart Twelve ? (y/n) > ")
 				menu() if rep == "y" else sys.exit(0)
